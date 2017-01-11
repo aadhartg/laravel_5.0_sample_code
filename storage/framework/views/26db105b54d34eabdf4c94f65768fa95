@@ -1,0 +1,22 @@
+
+
+<?php $__env->startSection('content'); ?>
+
+
+
+<div class="container">
+    <div class="inner-pages-cntnt">
+        <h2><?php echo e($page->title); ?></h2>
+        <?php echo $page->content; ?>
+
+    </div>
+</div>
+
+<?php $__env->stopSection(); ?>
+
+
+
+
+
+
+<?php echo $__env->make('layouts/innerapp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

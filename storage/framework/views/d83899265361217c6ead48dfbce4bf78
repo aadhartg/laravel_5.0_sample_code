@@ -1,0 +1,19 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-2 login-box">
+            <div class="panel panel-default">
+		 <div>
+		
+                    <img src="<?php echo url();?>/public/lib/img/comming.png">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts/frontend/startup', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

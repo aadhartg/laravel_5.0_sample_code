@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quickmerch</title>
+        <!-- Fonts -->
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        <link href="favicon.png" rel="shortcut icon">
+        <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo e(url('/lib/css/style.css')); ?>" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar navbar-static-top bs-docs-nav header-small" id="top" role="banner">
+            <div class="container">
+                <!--<div class="navbar-header"><a href="<?php echo e(url('/auth/accountsetup')); ?>" class="navbar-brand logo"><img title="" alt="" src="<?php echo e(url('/lib/img/logo.png')); ?>"></a></div>-->
+<div class="navbar-header"><a href="javascript:void(0)" class="navbar-brand logo"><img title="" alt="" src="<?php echo e(url('/lib/img/logo.png')); ?>"></a></div>
+                <ul  class="nav navbar-nav pull-right acount-setup">
+
+                    <li><a href="<?php echo e(url('/auth/logout')); ?>">Logout</a></li>
+                </ul>
+
+            </div>
+        </header>
+    </body>
+    <?php echo $__env->yieldContent('content'); ?>
+    <?php echo $__env->make('layouts/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

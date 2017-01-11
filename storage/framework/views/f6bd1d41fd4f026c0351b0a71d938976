@@ -1,0 +1,39 @@
+<?php $__env->startSection('content'); ?>
+<div class="loader-page">
+    <img src="<?php echo e(url('/lib/img/loaderspin.gif')); ?>">
+    <div id="loader">
+        <p>Your have Registered successfully!! <br/>
+            Please wait for a moment...you will be redirected to store set up page.<br/>
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var base_url = "<?php echo APP_URL; ?>";  // APP url in constants
+        var store_name = "<?php echo Auth::user()->subDomain; ?>";  // subdomain user stored with
+        var info = "<?php echo $info; ?>";  // hashed info for user authentication
+        
+
+        setTimeout(function () {
+            var res = base_url.split("//");
+              window.location.replace(res[0] + '//' + store_name + '.' + res[1] + 'auth/accountsetup/'+info);
+            //window.location.replace(base_url + 'auth/accountsetup');
+        }, 3000);
+        function disableBack() {
+            window.history.forward()
+        }
+
+        window.onload = disableBack();
+        window.onpageshow = function (evt) {
+            if (evt.persisted)
+                disableBack()
+        }
+    });
+
+</script>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layouts/blankapp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

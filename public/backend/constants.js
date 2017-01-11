@@ -1,0 +1,32 @@
+app.constant('Config', {
+    appTitle: 'Quickmerch',
+    appUrl: 'http://quickmerch.com/',
+    apiEndPoint: 'http://quickmerch.com/api',
+    backendEndPoint: 'http://quickmerch.com/admin',
+    httpServerUrl: 'http://quickmerch.com/',
+    httpBasePath: 'http://quickmerch.com/',
+    viewsPath: 'backend/partials/',
+    layoutElementPath: '/backend/partials/elements',
+}).constant('Plans', {
+    P1: 1,
+    P2: 2,
+    P3: 3,
+    P4: 4,
+}).constant('ToasterOptions', {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": true,
+    "positionClass": "toast-bottom-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+
+});

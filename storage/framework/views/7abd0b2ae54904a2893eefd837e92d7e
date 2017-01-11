@@ -1,0 +1,162 @@
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-2 acount-setup-page">
+            <div class="panel panel-default">
+                
+                <?php echo Form::open(array('url' => '/auth/accountsetup','class'=>'form-horizontal')); ?>
+
+                <div class="panel-body">
+<div class="panel-heading">Account Information</div>
+                    <?php if(count($errors) > 0): ?>
+                    <div class="alert alert-danger">
+                        <strong>Whoops!</strong> There were some error on page .<br><br>
+                    </div>
+                    <?php endif; ?>
+                    
+                    <?php if(isset($msg)): ?>
+                    <div class="alert alert-danger">
+                        <strong>Something Went Wrong!</strong> Please try later .<br><br>
+                    </div>
+                    <?php endif; ?>
+
+                    
+                    <?php echo Form::hidden('_token', csrf_token()); ?>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">First Name</label>
+                        <div class="col-md-12">
+                            <?php
+                            echo Form::text('first_name', Input::old('first_name'), array('class' => 'form-control', 'placeholder' => 'First Name'));
+                            ?>
+                            <?php if($errors->any() && $errors->has('first_name')): ?>
+                            <h4 class="error"><?php echo e($errors->first('first_name')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Last Name</label>
+                        <div class="col-md-12">
+                            <?php
+                            echo Form::text('last_name', Input::old('last_name'), array('class' => 'form-control', 'placeholder' => 'Last Name'));
+                            ?>
+                            <?php if($errors->any() && $errors->has('last_name')): ?>
+                            <h4 class="error"><?php echo e($errors->first('last_name')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Address</label>
+                        <div class="col-md-12">
+                            <?php
+                            echo Form::text('address', Input::old('address'), array('class' => 'form-control', 'placeholder' => 'Address'));
+                            ?>
+                            <?php if($errors->any() && $errors->has('address')): ?>
+                            <h4 class="error"><?php echo e($errors->first('address')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Country</label>
+                        <div class="col-md-12">
+                            <?php echo Form::select('country', (['' => 'Select a Country'] + $country), Input::old('country'), array('class' => 'form-control', 'id' => 'country')); ?>
+                            <?php if($errors->any() && $errors->has('country')): ?>
+                            <h4 class="error"><?php echo e($errors->first('country')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">State</label>
+                        <div class="col-md-12">
+                            <?php echo Form::select('state', (['' => 'Select a State'] + $state), Input::old('state'), array('class' => 'form-control', 'id' => 'state')); ?>
+                            <?php if($errors->any() && $errors->has('state')): ?>
+                            <h4 class="error"><?php echo e($errors->first('state')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">City</label>
+                        <div class="col-md-12">
+                            <?php
+                            echo Form::text('city', Input::old('city'), array('class' => 'form-control', 'placeholder' => 'City'));
+                            ?>
+                            <?php if($errors->any() && $errors->has('city')): ?>
+                            <h4 class="error"><?php echo e($errors->first('city')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Zipcode</label>
+                        <div class="col-md-12">
+                            <?php
+                            echo Form::text('pincode', Input::old('pincode'), array('class' => 'form-control', 'placeholder' => 'Zipcode'));
+                            ?>
+                            <?php if($errors->any() && $errors->has('pincode')): ?>
+                            <h4 class="error"><?php echo e($errors->first('pincode')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone</label>
+                        <div class="col-md-12">
+                            <?php
+                            echo Form::text('phone', Input::old('phone'), array('class' => 'form-control', 'placeholder' => 'Phone'));
+                            ?>
+                            <?php if($errors->any() && $errors->has('phone')): ?>
+                            <h4 class="error"><?php echo e($errors->first('phone')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+                <div class="panel-body">
+                    <div class="panel-heading">Store Information</div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Store Type</label>
+                        <div class="col-md-12">
+                            <?php echo Form::select('store_type_id', (['' => 'Select a stores Type'] + $storestype), Input::old('store_type_id'), array('class' => 'form-control', 'id' => 'store_type_id')); ?>
+                            <?php if($errors->any() && $errors->has('store_type_id')): ?>
+                            <h4 class="error"><?php echo e($errors->first('store_type_id')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Currency</label>
+                        <div class="col-md-12">
+                            <?php echo Form::select('currency', (['' => 'Select a Currency'] + $currencies), Input::old('currency'), array('class' => 'form-control', 'id' => 'currency')); ?>
+                            <?php if($errors->any() && $errors->has('currency')): ?>
+                            <h4 class="error"><?php echo e($errors->first('currency')); ?></h4>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                     <div class="form-group last-btn-setup">
+                        <div class="col-md-12 col-md-offset-4">
+                            <button type="submit" class="btn btn-primary">Account Setup</button>
+                        </div>
+                    </div>
+                    
+                <?php echo Form::close(); ?>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts/authapp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

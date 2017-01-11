@@ -1,0 +1,82 @@
+
+<div class="product-page-hdng">
+    <div class="prodct-hdng"><h3 id="dash-prodct-hdng"><span aria-hidden="true" class="glyphicon glyphicon-tags"></span> Products</h3>
+        <div class="col-md-12 col-lg-12 col-sm-12 list-grid-row">
+            <div class="list-grid-icon">
+                <a ng-click="swtichView('grid')" title="Grid View"><img title="List View" class="list-icon" title="" alt="" src="/lib/img/list-icon.png"></a>
+                <a ng-click="swtichView('list')" title="List View"><img title="Grid View" class="grid-icon" title="" alt="" src="/lib/img/grid-icon.png"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dash-sectn-bg product-page">
+    <div class="prodcts-page-cntnt">
+
+        <div class="all-prdcts-hdng">
+            <a ui-sref="adminLayout.product-add"><button class="btn btn-primary add-prdct" type="submit">Add a product</button></a>
+        </div>
+
+        <div class="filtr-prdct-search" ng-class="{gview : view === 'list'}">
+            <!-- @start search and filters -->
+            <!--div class="search-bar-filtr">
+                <div class="dropdown sechbar-filtr-ropdwn">
+                    <button class="btn btn-default dropdown-toggle inner-togle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Filter Products
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <p>Show all products where:</p>
+                        <select>
+                            <option>Select a filter</option>
+                            <option>Visibility</option>
+                            <option>Product type</option>
+                        </select>
+                    </ul>
+                </div>
+                <input type="text" placeholder="Start typing to search for products..." class="filter-search-input" />
+            </div -->
+            <!-- @end search and filters -->
+
+            <!-- @start bulk action block -->
+            <!--div class="edit-prdct-sctn">
+                <div class="lft-tab"><input type="checkbox" /> 1 product</div>
+                <div class="dropdown right-tab">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Bulk actions
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Publish selected products</a></li>
+                        <li><a href="#">Hide selected products</a></li>
+                        <li><a href="#">Delete selected products</a></li>
+                    </ul>
+                </div>
+
+                <div class="right-txt">All products on this page are selected.</div>
+            </div -->
+            <!-- @end bulk action block -->
+
+            <div class="product-list">
+              
+                <div class="col-md-12 col-lg-12 col-sm-12 products-description" ng-repeat="product in products">
+                    <!-- input type="checkbox" class="prodct-list-checkbox" / -->
+                    <div class="products-description-img">
+                        <img ng-if="!product.image_name" title="" alt="" src="/lib/img/jersy-icon.png">
+                        <img class="sm images" ng-if="product.image_name" title="" alt="" ng-src="{{product.image_path}}/{{product.image_name}}">
+                    </div>
+                    <ul>
+                        <li><a ui-sref="adminLayout.product-view({id:product.id})">{{product.name}}</a></li>
+                        <li>{{product.stock}} - Available</li>
+                        <li>{{product.sold}} - Sold</li>
+                    </ul>
+                    <div class="products-description-icons">
+                        <a ui-sref="adminLayout.product-view({id:product.id})"><img class="setting-blue-icon" title="edit" alt="" src="/lib/img/setting-blue-icon.png"></a>
+                        <a ng-click="delete(product.id)"><img class="cancel-blue-icon" title="delete" alt="" src="/lib/img/cancel-blue-icon-nw.png"></a>
+                    </div>
+                </div>
+                <div  ng-hide="dataloader==true" style="text-align:center;" ng-if="products.length == 0"><strong>No Record Found.</strong></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<?php $__env->startSection('content'); ?>
+<style>
+			
+			.container {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.content {
+				text-align: center;
+				display: inline-block;
+			}
+
+			.title {
+				font-size: 72px;
+				margin-bottom: 140px;
+			}
+		</style>
+
+<div class="container">
+			<div class="content">
+				<div class="title">Store unavailable!</div>
+			</div>
+		</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts/innerapp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

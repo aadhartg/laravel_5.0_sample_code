@@ -1,0 +1,40 @@
+<?php $__env->startSection('content'); ?>
+<div class="product-pricng">
+<div class="container">
+    <div class="inner-pages-cntnt">
+
+        <h2>Prices</h2>
+
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+          
+            <div id="pricingTable"> 
+
+                <?php foreach($plans as $plan): ?>
+
+                <div class="col-lg-3 colStart">
+                    <div class="col1">
+                        <h3><?php echo e($plan->plan_name); ?></h3>
+                        <p><?php echo e($plan->id == 1 ? 'Free' : '$' . $plan->plan_price . '/Month'); ?></p>
+                    </div>	
+                    <div class="row1"><?php echo e($plan->max_products); ?> Products</div>
+                    <div class="row1"><?php echo e($plan->max_product_images); ?> image per product</div>
+                    <div class="row1"><?php echo e($plan->custom_pages); ?>custom page</div>
+                    <div class="row1">Quickmerch.com URL</div>
+
+                    <a class="btn btn-secondary btn-block" href="<?php echo e(url('auth/login')); ?>">Get started</a>
+                </div>
+
+                <?php endforeach; ?>
+
+            </div>
+       
+
+    </div>
+</div>
+</div>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts/innerapp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

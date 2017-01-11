@@ -1,0 +1,21 @@
+
+
+<?php $__env->startSection('content'); ?>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-2 login-box">
+            <div class="panel panel-default">
+                 <div>
+                    <a href="<?php echo e(url(APP_URL)); ?>">CLICK HERE TO SETUP AN ONLINE STORE</a>
+                </div>
+                This shop doesn't have a website yet.<br/>
+                If you're the store owner, you can log in here.
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts/frontend/startup', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

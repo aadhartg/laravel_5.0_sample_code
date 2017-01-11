@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h3>Welcome to <?php echo e(APP_NAME); ?></h3>
+<h6>Your Store name <?php echo e($store_name); ?></h6>
+<h6>Your Store url <?php echo e($subDomain); ?>.quickmerch.com </h6>
+<h3>Regards<br/>
+<?php echo e(APP_NAME); ?></h3>
+</body>
+</html>

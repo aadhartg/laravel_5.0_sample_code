@@ -1,0 +1,65 @@
+<footer>
+    <div class="container">
+        <div class="col-lg-5 col-md-5 col-sm-5 ftr-about">
+            <p>About QuickMerch</p>
+            <span>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma.  In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma. In his igitur partibus duabus nihil erat, quod. </span>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 ftr-links">
+            <ul>
+                <li><a href="<?php echo e(url('/')); ?>">Home</a></li>
+                <li><a href="<?php echo e(url('page/about_us')); ?>">About</a></li>
+                <li><a href="<?php echo e(url('page/features')); ?>">Features</a></li>
+                <li><a href="<?php echo e(url('page/prices')); ?>">Prices</a></li>
+                <li><a href="<?php echo e(url('auth/login')); ?>">Login</a></li>
+                <li><a href="<?php echo e(url('auth/signup')); ?>">Sign up</a></li>
+                <li><a href="<?php echo e(url('page/term_condition')); ?>">Terms & Condition</a></li>
+                <li><a href="<?php echo e(url('page/privacy_policy')); ?>">Privacy Polices</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 ftr-links">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Google+</a></li>
+                <li><a href="#">Printrest</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 ftr-newsleter">
+            <p>Subscribe to News Letter</p>
+            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your e-mail Id">
+            <a href="#">Subscribe NOW</a>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="<?php echo e(url('/lib/js/bootstrap.min.js')); ?>"></script>
+
+<script>
+
+$(document).ready(function ($) {
+    $('#country').change(function () {
+        $.get("<?php echo e(url('api/dropdown')); ?>",
+                {option: $(this).val()},
+        function (data) {
+            var model = $('#state');
+            model.empty();
+
+            $.each(data, function (index, element) {
+                model.append("<option value='" + element.id + "'>" + element.state + "</option>");
+            });
+        });
+    });
+});
+
+</script>
+
+</body>
+</html>
+

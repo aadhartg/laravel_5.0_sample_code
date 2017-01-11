@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quickmerch</title>
+        <!-- Fonts -->
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        <link href="favicon.png" rel="shortcut icon">
+        <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo e(url('/lib/css/style.css')); ?>" rel="stylesheet">
+    </head>
+    <body>
+        <!--<div class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><i class="ion-ios7-pulse-strong"></i> Quickmerch</a>
+            </div>
+         </div>-->
+
+
+
+
+
+        <header class="navbar navbar-static-top bs-docs-nav header-small" id="top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="<?php echo e(url(APP_URL)); ?>" class="navbar-brand logo"><img title="" alt="" src="<?php echo e(url('lib/img/logo.png')); ?>"></a>
+                </div>
+            </div>
+        </header>
+    </body>
+
+
+    <?php echo $__env->yieldContent('content'); ?>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="col-lg-5 col-md-5 col-sm-5 ftr-about">
+                <p>About QuickMerch</p>
+                <span>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma.  In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma. In his igitur partibus duabus nihil erat, quod. </span>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 ftr-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">Login/Sign up</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Privacy Polices</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 ftr-links">
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Printrest</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 ftr-newsleter">
+                <p>Subscribe to News Letter</p>
+                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="Enter your e-mail Id">
+                <a href="#">Subscribe NOW</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script src="<?php echo e(url('/lib/js/bootstrap.min.js')); ?>"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quickmerch</title>
+
+    <link href="<?php echo e(url('/lib/css/bootstrap.min.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(url('/lib/css/bootstrap.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(url('/lib/css/style.css')); ?>" rel="stylesheet">
+    
+    
+</head>
+
+<body>
+
+<header role="banner" id="top" class="navbar navbar-static-top bs-docs-nav header-small pricing-hdr">
+  <div class="container">
+    <div class="navbar-header">
+      <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+    
+    <nav class="collapse navbar-collapse bs-navbar-collapse menu">
+      <ul class="nav navbar-nav">
+          <li>If you have any questions you can contact us by phone at 1-888-888888.</li>
+      </ul>
+      </nav>
+    
+    
+   
+    
+  </div>
+</header>
+<!--header end-->

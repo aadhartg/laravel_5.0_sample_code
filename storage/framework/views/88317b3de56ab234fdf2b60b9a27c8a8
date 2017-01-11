@@ -1,0 +1,84 @@
+<?php $__env->startSection('content'); ?>
+<div class="product-pricng nw-pricng">
+    <div class="container">
+        <div class="PageTitle">
+            <div class="col-md-12 col-lg-12 col-sm-12 cntnt-hdng"><?php echo e(Auth::user()->email); ?>Your free trial has expired. Please pick a plan.
+                <p>Don’t worry, nothing has been lost and you can easily re-open your account by picking a plan below.<br>
+                </p>
+            </div>
+        </div>
+        <div id="pricingTable"> 
+            <img width="119" height="129" alt="current plan" src="http://www.quickmerch.com/images/currentPlan.png" id="currentPlan-img">
+            <div class="col-lg-3 colStart">
+                <div class="col1">
+                    <h3>Gold</h3>
+                    <p>Free</p>
+                </div>	
+                <div class="row1">5 Products</div>
+                <div class="row1">1 image per product</div>
+                <div class="row1">1 custom page</div>
+                <div class="row1">Basic Stats</div>
+                <div class="row1">Basic customization</div>
+                <div class="row1">No inventory tracking</div>
+                <div class="row1">No discount codes</div>
+                <div class="row1">Quickmerch.com URL</div>
+            </div>
+
+            <div class="col-lg-3 col">
+                <div class="col1">
+                    <h3>Platinum</h3>
+                    <p>$4.99/ month</p>
+                </div>
+                <div class="row1">25 Products</div>
+                <div class="row1">3 image per product</div>
+                <div class="row1">3 custom page</div>
+                <div class="row1">Better Stats</div>
+                <div class="row1">Full customization</div>
+                <div class="row1">Inventory tracking</div>
+                <div class="row1">Discount codes</div>
+                <div class="row1">Use your own URL</div>
+                <?php $str2 = 2;
+                $plan_type2 = base64_encode($str2); ?>
+                <a href="<?php echo e(url('/billing/'.$plan_type2)); ?>" class="btn btn-secondary btn-block">Get started</a>
+            </div>
+            <div class="col-lg-3">
+                <div class="col1">
+                    <h3>Diamond</h3>
+                    <p>$9.99/month</p>
+                </div>
+                <div class="row1">100 Products</div>
+                <div class="row1">5 image per product</div> 
+                <div class="row1">10 custom page</div> 
+                <div class="row1">Best Stats</div>
+                <div class="row1">Full customization</div> 
+                <div class="row1">Inventory tracking</div>
+                <div class="row1">Discount codes</div>
+                <div class="row1">Use your own URL</div> 
+<?php $str3 = 3;
+$plan_type3 = base64_encode($str3); ?>
+                <a href="<?php echo e(url('/billing/'.$plan_type3)); ?>" class="btn btn-secondary btn-block">Get started</a>
+            </div>
+            <div class="col-lg-3 colEnd">  
+                <div class="col1">
+                    <h3>Titanium</h3>
+                    <p>14.99/month</p>
+                </div>
+                <div class="row1">300 Products</div> 
+                <div class="row1">5 image per product</div>
+                <div class="row1">10 custom page</div>
+                <div class="row1">Best Stats</div> 
+                <div class="row1">Full customization</div>
+                <div class="row1">Inventory tracking</div>
+                <div class="row1">Discount codes</div> 
+                <div class="row1">Use your own URL</div>
+<?php $str4 = 4;
+$plan_type4 = base64_encode($str4); ?>
+                <a href="<?php echo e(url('/billing/'.$plan_type4)); ?>" class="btn btn-secondary btn-block">Get started</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts/plan_upgradeapp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
